@@ -9,7 +9,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { VscFeedback } from "react-icons/vsc";
 import { IoBriefcaseOutline } from "react-icons/io5";
-import Techcta from "./techcta";
+import Techcta from "./Techcta";
 import Reactimg from "../assets/react.png";
 import Notion from "../assets/notion.jpg";
 import Vite from "../assets/vitejs-logo.svg";

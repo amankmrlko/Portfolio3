@@ -3,7 +3,7 @@ import Heading from "./Heading";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import EmailCTA from "./EmailCTA";
-import Techcta from "./techcta";
+import Techcta from "./Techcta";
 import Reactimg from "../assets/react.png";
 import Notion from "../assets/notion.jpg";
 import Vite from "../assets/vitejs-logo.svg";

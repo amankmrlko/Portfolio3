@@ -45,7 +45,7 @@ function NavMobile() {
             `link hover2 gray-text ${isActive ? "clicked" : ""}`
           }
         >
-          <MdOutlineExplore size={18} />
+          <MdOutlineExplore size={20} />
           <p>Explore</p>
         </NavLink>
         <NavLink
@@ -54,7 +54,7 @@ function NavMobile() {
             `link hover2 gray-text ${isActive ? "clicked" : ""}`
           }
         >
-          <IoPersonOutline size={18} />
+          <IoPersonOutline size={20} />
           <p>About</p>
         </NavLink>
         <NavLink
@@ -63,7 +63,7 @@ function NavMobile() {
             `link hover2 gray-text ${isActive ? "clicked" : ""}`
           }
         >
-          <CiPen size={18} />
+          <CiPen size={20} />
           <p>Projects</p>
         </NavLink>
         <NavLink
@@ -72,7 +72,7 @@ function NavMobile() {
             `link hover2 gray-text ${isActive ? "clicked" : ""}`
           }
         >
-          <IoBriefcaseOutline size={18} />
+          <IoBriefcaseOutline size={20} />
           <p>Experience</p>
         </NavLink>
         <NavLink
@@ -81,7 +81,7 @@ function NavMobile() {
             `link hover2 gray-text ${isActive ? "clicked" : ""}`
           }
         >
-          <FaReact size={18} />
+          <FaReact size={20} />
           <p>Techstack</p>
         </NavLink>
         <NavLink
@@ -90,7 +90,7 @@ function NavMobile() {
             `link hover2 gray-text ${isActive ? "clicked" : ""}`
           }
         >
-          <VscFeedback size={18} />
+          <VscFeedback size={20} />
           <p>Thoughts</p>
         </NavLink>
         <NavLink
@@ -99,7 +99,7 @@ function NavMobile() {
             `link hover2 gray-text ${isActive ? "clicked" : ""}`
           }
         >
-          <GrContact size={18} />
+          <GrContact size={20} />
           <p>Contact Me</p>
         </NavLink>
         <a
@@ -108,7 +108,7 @@ function NavMobile() {
           rel="noopener noreferrer"
         >
           <div className="link hover2 gray-text">
-            <FaLinkedin size={18} />
+            <FaLinkedin size={20} />
             <p>LinkedIn</p>
           </div>
         </a>
@@ -118,7 +118,7 @@ function NavMobile() {
           rel="noopener noreferrer"
         >
           <div className="link hover2 gray-text">
-            <FaGithubSquare size={18} />
+            <FaGithubSquare size={20} />
             <p>GitHub</p>
           </div>
         </a>

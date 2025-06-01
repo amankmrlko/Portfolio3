@@ -15,6 +15,7 @@ import Thoughts from "./components/Thoughts";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { AnimatePresence } from "framer-motion";
+import NavMobile from "./components/NavMobile";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -39,6 +40,7 @@ function App() {
     <Router>
       <div className="canvas">
         <NavBar />
+        <NavMobile />
         <div className="layout">
           <div className="main-content">
             <AnimatedRoutes />

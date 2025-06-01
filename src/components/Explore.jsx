@@ -61,7 +61,7 @@ function Explore() {
       </div>
 
       <h4 className="white-text extra-extra-margin">Latest Work</h4>
-      <div className="flex space-between">
+      <div className="flex no-mob-flex space-between">
         <ProjectCTA
           image={Framer_project}
           link="https://amankmrlko.github.io/FramerTemplateClone/"
@@ -76,7 +76,7 @@ function Explore() {
         />
       </div>
 
-      <div className="flex space-between extra-extra-margin">
+      <div className="flex no-mob-flex2 space-between extra-extra-margin">
         <div
           className="card"
           onMouseMove={(e) => handleMouseMove(e, "highlight-1")}

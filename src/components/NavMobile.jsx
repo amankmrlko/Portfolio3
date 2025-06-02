@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/profilePic.jpg";
 import { MdOutlineExplore } from "react-icons/md";
-import { FaArrowRight } from "react-icons/fa";
 import { IoPersonOutline } from "react-icons/io5";
 import { CiPen } from "react-icons/ci";
 import { IoBriefcaseOutline } from "react-icons/io5";
@@ -10,7 +9,6 @@ import { FaReact } from "react-icons/fa";
 import { VscFeedback } from "react-icons/vsc";
 import { GrContact } from "react-icons/gr";
 import { FaLinkedin } from "react-icons/fa";
-import { MdArrowOutward } from "react-icons/md";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa6";
 

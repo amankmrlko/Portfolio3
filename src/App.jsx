@@ -17,6 +17,7 @@ import Footer from "./components/Footer";
 import { AnimatePresence } from "framer-motion";
 import NavMobile from "./components/NavMobile";
 import { FaDownload } from "react-icons/fa6";
+import Notfound from "./components/Notfound";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -31,6 +32,7 @@ function AnimatedRoutes() {
         <Route path="/techstack" element={<Techstack />} />
         <Route path="/thoughts" element={<Thoughts />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Notfound />} />
       </Routes>
     </AnimatePresence>
   );

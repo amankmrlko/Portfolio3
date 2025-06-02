@@ -17,6 +17,8 @@ import Sitecore from "../assets/sitecore.jpg";
 import Git from "../assets/git.png";
 import Azure from "../assets/azure.png";
 import Chatgpt from "../assets/chatgpt.png";
+import Visual from "../assets/Visual.png";
+import Ssms from "../assets/ssms.png";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -75,6 +77,12 @@ function Techstack() {
             title="Sitecore"
             description="Enterprise-level CMS"
           />
+          <Techcta
+            image={Ssms}
+            link="https://learn.microsoft.com/en-us/ssms/"
+            title="SQL Server"
+            description="Database management tool"
+          />
         </div>
       </div>
       <div className="techstack extra-extra-margin">
@@ -120,6 +128,12 @@ function Techstack() {
             link="https://azure.microsoft.com/en-in"
             title="Azure"
             description="Monitor. Optimize. Improve."
+          />
+          <Techcta
+            image={Visual}
+            link="https://visualstudio.microsoft.com/"
+            title="Visual Studio"
+            description="Code development environment"
           />
         </div>
       </div>

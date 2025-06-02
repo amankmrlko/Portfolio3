@@ -565,6 +565,7 @@ a {
     width: 100%;
   }
   .bottomNav {
+    border-top: 1px solid var(--cta);
     display: flex;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -607,7 +608,7 @@ a {
     border-radius: 0px;
   }
   .footer-container {
-    padding-bottom: 75px;
+    padding-bottom: 100px;
   }
 }
 @media (min-width: 675px) and (max-width: 1022px) {
@@ -714,7 +715,7 @@ a {
   .resume-height {
     display: block !important;
     position: fixed;
-    right: 30px;
+    right: 40px;
     top: 30px;
     z-index: 2000;
   }

@@ -16,6 +16,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { AnimatePresence } from "framer-motion";
 import NavMobile from "./components/NavMobile";
+import { FaDownload } from "react-icons/fa6";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -42,6 +43,18 @@ function App() {
         <NavBar />
         <NavMobile />
         <div className="layout">
+          <a
+            href="https://drive.google.com/uc?export=download&id=1FMlJs7ihsrwLeIJ7HLJx9oR0GX5nXOHM"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="resume-height white-text hover1">
+              <p>
+                <FaDownload size={15} />
+                &nbsp;&nbsp;&nbsp;Resume
+              </p>
+            </div>
+          </a>
           <div className="main-content">
             <AnimatedRoutes />
           </div>

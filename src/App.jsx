@@ -18,6 +18,11 @@ import { AnimatePresence } from "framer-motion";
 import NavMobile from "./components/NavMobile";
 import { FaDownload } from "react-icons/fa6";
 import Notfound from "./components/Notfound";
+import Login from "./components/Login";
+import Blogpost from "./components/Blogpost";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Blogs from "./components/Blogs";
+import BlogPage from "./components/BlogPage";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -32,6 +37,17 @@ function AnimatedRoutes() {
         <Route path="/techstack" element={<Techstack />} />
         <Route path="/thoughts" element={<Thoughts />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/:id" element={<BlogPage />} />
+        <Route
+          path="/blogpost"
+          element={
+            <ProtectedRoute>
+              <Blogpost />
+            </ProtectedRoute>
+          }
+        />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </AnimatePresence>
@@ -46,7 +62,7 @@ function App() {
         <NavMobile />
         <div className="layout">
           <a
-            href="https://drive.google.com/uc?export=download&id=1FMlJs7ihsrwLeIJ7HLJx9oR0GX5nXOHM"
+            href="https://drive.google.com/uc?export=download&id=1xlIeY1b0kz37o86Cc4YpOGFhfJ-q3vU4"
             target="_blank"
             rel="noopener noreferrer"
           >

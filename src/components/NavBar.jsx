@@ -13,6 +13,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa6";
+import { MdOutlineArticle } from "react-icons/md";
 
 function NavBar() {
   return (
@@ -97,6 +98,18 @@ function NavBar() {
           <FaArrowRight size={11} />
         </span>
       </NavLink>
+      <NavLink
+        to="/blogs"
+        className={({ isActive }) =>
+          `link hover2 gray-text ${isActive ? "clicked" : ""}`
+        }
+      >
+        <MdOutlineArticle size={18} />
+        <p>Blogs</p>
+        <span className="arrow">
+          <FaArrowRight size={11} />
+        </span>
+      </NavLink>
       <p className="gray-text smalltext extra-margin">Connect</p>
       <NavLink
         to="/contact"
@@ -137,7 +150,7 @@ function NavBar() {
         </div>
       </a>
       <a
-        href="https://drive.google.com/uc?export=download&id=1FMlJs7ihsrwLeIJ7HLJx9oR0GX5nXOHM"
+        href="https://drive.google.com/uc?export=download&id=1xlIeY1b0kz37o86Cc4YpOGFhfJ-q3vU4"
         target="_blank"
         rel="noopener noreferrer"
       >

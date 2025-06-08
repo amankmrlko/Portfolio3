@@ -6,6 +6,8 @@ import Framer_project from "../assets/framer_project.jpg";
 import Sundown from "../assets/sundown.jpg";
 import Ouchi from "../assets/ouchi.jpg";
 import Firstportfolio from "../assets/firstportfolio.jpg";
+import { Link } from "react-router-dom";
+import EmailCTA from "./EmailCTA";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -25,6 +27,12 @@ function Projects() {
         title="Crafted With Code"
         subtitle="A showcase of web experiences built with precision, performance, and purpose."
       />
+      <div className="flex extra-margin">
+        <Link to="/blogs">
+          <p className="cta1 hover1">View Blogs</p>
+        </Link>
+        <EmailCTA />
+      </div>
       <h4 className="white-text extra-extra-margin">My Work</h4>
       <div className="grid2c gap10px">
         <ProjectCTA

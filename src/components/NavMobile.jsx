@@ -11,6 +11,7 @@ import { GrContact } from "react-icons/gr";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa6";
+import { MdOutlineArticle } from "react-icons/md";
 
 function NavMobile() {
   return (
@@ -24,7 +25,7 @@ function NavMobile() {
           </div>
         </NavLink>
         <a
-          href="https://drive.google.com/uc?export=download&id=1FMlJs7ihsrwLeIJ7HLJx9oR0GX5nXOHM"
+          href="https://drive.google.com/uc?export=download&id=1xlIeY1b0kz37o86Cc4YpOGFhfJ-q3vU4"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -90,6 +91,15 @@ function NavMobile() {
         >
           <VscFeedback size={25} />
           <p>Thoughts</p>
+        </NavLink>
+        <NavLink
+          to="/blogs"
+          className={({ isActive }) =>
+            `link hover2 gray-text ${isActive ? "clicked" : ""}`
+          }
+        >
+          <MdOutlineArticle size={25} />
+          <p>Blogs</p>
         </NavLink>
         <NavLink
           to="/contact"

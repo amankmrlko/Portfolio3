@@ -25,7 +25,7 @@ function NavMobile() {
           </div>
         </NavLink>
         <a
-          href="https://drive.google.com/uc?export=download&id=1xlIeY1b0kz37o86Cc4YpOGFhfJ-q3vU4"
+          href="https://drive.google.com/uc?export=download&id=12NvSoT09oymjuhqndzcD8rpdQ_5nFyne"
           target="_blank"
           rel="noopener noreferrer"
         >

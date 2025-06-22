@@ -116,6 +116,7 @@ const bannedWords = [
   "fuckboy",
   "fuckgirl",
   "degenerate",
+  "burchatta",
 
   "chutya",
   "chutiyaa",

@@ -8,12 +8,13 @@ import Sundown from "../assets/sundown.jpg";
 import { FaQuoteLeft } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { VscFeedback } from "react-icons/vsc";
-import { IoBriefcaseOutline } from "react-icons/io5";
+import { MdOutlineArticle } from "react-icons/md";
 import Techcta from "./Techcta";
 import Reactimg from "../assets/react.png";
 import Notion from "../assets/notion.jpg";
 import Vite from "../assets/vitejs-logo.svg";
 import Claude from "../assets/claude.avif";
+import { MdArrowOutward } from "react-icons/md";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -76,7 +77,7 @@ function Explore() {
         />
       </div>
 
-      <div className="flex no-mob-flex2 space-between extra-extra-margin">
+      <div className="flex no-mob-flex2 space-between extra-margin">
         <div
           className="card"
           onMouseMove={(e) => handleMouseMove(e, "highlight-1")}
@@ -104,18 +105,40 @@ function Explore() {
         >
           <div className="highlight" id="highlight-2"></div>
           <div className="card-icon white-text">
-            <IoBriefcaseOutline size={18} />
+            <MdOutlineArticle size={18} />
           </div>
-          <h3 className="white-text">Experience</h3>
-          <p className="gray-text">Building expertise, one role at a time.</p>
-          <Link to="/experience">
+          <h3 className="white-text">Blogs</h3>
+          <p className="gray-text">Insights, stories, and breakdowns.</p>
+          <Link to="/blogs">
             <p className="extra-extra-margin cta1 white-text hover1">
-              My Journey
+              View Blogs
             </p>
           </Link>
         </div>
       </div>
-
+      <div className="learningcard extra-extra-margin">
+        <h4 className="white-text center-text">Certifications</h4>
+        <div className="columnflex center-text gray-text">
+          <a
+            target="_blank"
+            href="https://www.freecodecamp.org/certification/fcc-25595028-d0d5-4b70-80e8-3056d3c0ee34/javascript-algorithms-and-data-structures-v8"
+          >
+            <p>
+              JavaScript Algorithms and Data Structures&nbsp;&nbsp;
+              <MdArrowOutward size={15} />
+            </p>
+          </a>
+          <a
+            target="_blank"
+            href="https://www.freecodecamp.org/certification/fcc-25595028-d0d5-4b70-80e8-3056d3c0ee34/front-end-development-libraries"
+          >
+            <p>
+              Front End Development Libraries&nbsp;&nbsp;
+              <MdArrowOutward size={15} />
+            </p>
+          </a>
+        </div>
+      </div>
       <div className="gray-text quote-section">
         <FaQuoteLeft size={70} className="quote-icon" />
         <p className="quote">

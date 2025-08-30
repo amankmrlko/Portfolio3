@@ -32,7 +32,8 @@ function Blogs() {
   hasMoreRef.current = hasMore;
 
   const fetchBlogs = async (isInitialLoad = false) => {
-    if (loading) return;
+    // Prevent multiple simultaneous requests and stop if no more blogs
+    if (loading || (!isInitialLoad && !hasMore)) return;
 
     setLoading(true);
 
@@ -40,9 +41,17 @@ function Blogs() {
       const blogsRef = collection(db, "blogs");
       let q;
 
-      if (isInitialLoad || !lastVisible) {
+      if (isInitialLoad) {
+        // Reset state for initial load
+        setLastVisible(null);
+        setHasMore(true);
         q = query(blogsRef, orderBy("timestamp", "desc"), limit(6));
       } else {
+        // Only proceed if we have a lastVisible document
+        if (!lastVisible) {
+          setLoading(false);
+          return;
+        }
         q = query(
           blogsRef,
           orderBy("timestamp", "desc"),
@@ -57,16 +66,21 @@ function Blogs() {
         ...doc.data(),
       }));
 
-      if (newBlogs.length < 6) {
+      // Check if we've reached the end
+      if (newBlogs.length === 0 || newBlogs.length < 6) {
         setHasMore(false);
       }
 
       if (isInitialLoad) {
         setBlogs(newBlogs);
       } else {
-        setBlogs((prev) => [...prev, ...newBlogs]);
+        // Only add new blogs if we actually got some
+        if (newBlogs.length > 0) {
+          setBlogs((prev) => [...prev, ...newBlogs]);
+        }
       }
 
+      // Update lastVisible only if we have documents
       if (querySnapshot.docs.length > 0) {
         setLastVisible(querySnapshot.docs[querySnapshot.docs.length - 1]);
       }
@@ -157,11 +171,12 @@ function Blogs() {
             <div className="spinner"></div>
           </div>
         )}
-        {!hasMore && blogs.length > 0 && (
-          <p className="gray-text extra-margin text-center">
-            No more posts to load
-          </p>
-        )}
+      </div>
+
+      <div>
+        <p className="gray-text center-text">
+          You've scrolled through every brilliant thought in the brain dump
+        </p>
       </div>
     </motion.div>
   );

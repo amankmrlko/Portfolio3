@@ -8,6 +8,8 @@ import Ouchi from "../assets/ouchi.jpg";
 import Firstportfolio from "../assets/firstportfolio.jpg";
 import { Link } from "react-router-dom";
 import EmailCTA from "./EmailCTA";
+import chatspaceimg from "../assets/chatspace_thumbnail.jpg";
+import { MdArrowOutward } from "react-icons/md";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -35,6 +37,22 @@ function Projects() {
       </div>
       <h4 className="white-text extra-extra-margin">My Work</h4>
       <div className="grid2c gap10px">
+        <a href="/chat-space">
+          <div className="project-box">
+            <div className="image-div">
+              <img src={chatspaceimg} alt="Project thumbnail" />
+            </div>
+            <div className="project-desc">
+              <div>
+                <h5 className="white-text">Instant Real-Time Chat Platform</h5>
+                <p className="gray-text">
+                  Secure, fast, and seamless messaging everywhere
+                </p>
+              </div>
+              <MdArrowOutward size={20} className="gray-text" />
+            </div>
+          </div>
+        </a>
         <ProjectCTA
           image={Framer_project}
           link="https://amankmrlko.github.io/FramerTemplateClone/"

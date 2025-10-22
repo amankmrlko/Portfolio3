@@ -1054,3 +1054,16 @@ a {
 .margin-bottom {
   margin-bottom: 50px;
 }
+
+.token.arrow {
+  display: none;
+}
+
+.noscroll {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE & Edge */
+}
+
+.noscroll::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari */
+}

@@ -23,6 +23,7 @@ import Blogpost from "./components/Blogpost";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Blogs from "./components/Blogs";
 import BlogPage from "./components/BlogPage";
+import ChatSpace from "./components/ChatSpace";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -39,6 +40,7 @@ function AnimatedRoutes() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/chat-space" element={<ChatSpace />} />
         <Route path="/blogs/:id" element={<BlogPage />} />
         <Route
           path="/blogpost"

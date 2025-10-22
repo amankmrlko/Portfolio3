@@ -15,6 +15,7 @@ import Notion from "../assets/notion.jpg";
 import Vite from "../assets/vitejs-logo.svg";
 import Claude from "../assets/claude.avif";
 import { MdArrowOutward } from "react-icons/md";
+import chatspaceimg from "../assets/chatspace_thumbnail.jpg";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -63,12 +64,22 @@ function Explore() {
 
       <h4 className="white-text extra-extra-margin">Latest Work</h4>
       <div className="flex no-mob-flex space-between">
-        <ProjectCTA
-          image={Framer_project}
-          link="https://amankmrlko.github.io/FramerTemplateClone/"
-          title="Brandfolio"
-          description="Modern portfolio for brand storytelling"
-        />
+        <a href="/chat-space">
+          <div className="project-box">
+            <div className="image-div">
+              <img src={chatspaceimg} alt="Project thumbnail" />
+            </div>
+            <div className="project-desc">
+              <div>
+                <h5 className="white-text">Instant Real-Time Chat Platform</h5>
+                <p className="gray-text">
+                  Secure, fast, and seamless messaging everywhere
+                </p>
+              </div>
+              <MdArrowOutward size={20} className="gray-text" />
+            </div>
+          </div>
+        </a>
         <ProjectCTA
           image={Sundown}
           link="https://amankmrz-sundownclone.netlify.app/"

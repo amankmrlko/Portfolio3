@@ -27,47 +27,49 @@ function About() {
       <div className="about-wrapper">
         <Heading
           title="About Aman"
-          subtitle="Based in India, I’m a front-end developer passionate about building responsive and engaging web experiences. With experience in modern technologies like React.js, JavaScript, and Tailwind CSS, I focus on creating interfaces that are both functional and visually refined. Outside of tech, I enjoy playing guitar, producing music, reading, and playing chess - always finding new ways to stay creative and curious."
+          subtitle="Based in India, I'm a full-stack developer passionate about building fast, reliable, and thoughtful digital experiences. I enjoy turning ideas into scalable products, from crafting smooth interfaces to designing robust back-end systems. With experience across modern technologies, I focus on writing clean, efficient code that bridges design and functionality. Outside of tech, I love playing guitar, producing music, reading, and playing chess, always looking for new ways to stay creative and curious."
         />
 
         <img className="amanimg" src={Aman} alt="Aman" />
         <div className="aboutPara gray-text">
           <p>
-            My journey into web development started with a deep curiosity about
-            how the digital world works and a strong desire to create seamless
-            and engaging user experiences. With a B.Tech degree and a hands-on
-            approach to learning, I have turned that curiosity into a career by
-            bringing ideas to life through responsive, accessible, and scalable
-            interfaces using tools like React.js, JavaScript, and Tailwind CSS.
+            My journey into web development began with curiosity, a drive to
+            understand how ideas become experiences on the web. Over time, that
+            curiosity turned into a deep passion for building products that not
+            only look good but work reliably at scale. With a B.Tech degree and
+            a hands-on learning mindset, I've grown from shaping intuitive
+            interfaces to designing full-stack systems that bring those
+            interfaces to life.
           </p>
           <br />
           <p>
-            At Tata Consultancy Services, I have contributed to building high
-            performance web solutions, working on everything from front-end
-            development to debugging live production issues. I take pride in
-            writing clean and efficient code, and in creating user interfaces
-            that are both visually appealing and functionally solid.
-            <p>
-              <br />
-              <p>
-                For me, good design is not just about how it looks but how it
-                works and how it feels. I aim to make sure every project I work
-                on delivers a clear and thoughtful user experience.
-              </p>
-              <br />
-              <p>
-                Outside of work, I am passionate about music. I play the guitar
-                and enjoy producing music in my free time. I also love playing
-                chess, which helps me stay sharp and focused, and I spend a lot
-                of time reading both fiction and nonfiction to keep my mind
-                inspired.
-              </p>
-              <br />
-            </p>
+            At Tata Consultancy Services, I've contributed to high-performance
+            web solutions across both front-end and back-end domains. Building
+            responsive UIs, optimizing APIs, and ensuring smooth deployments. I
+            focus on writing clean, maintainable code and love solving
+            real-world challenges that require both technical precision and
+            creative problem-solving.
+          </p>
+          <br />
+          <p>
+            I believe great software isn't just functional. It's reliable,
+            secure, and built with empathy for the user. Whether it's
+            architecting a system, integrating real-time features, or refining
+            the user journey, my goal is always the same: to create digital
+            experiences that feel effortless and purposeful.
+          </p>
+          <br />
+          <p>
+            Beyond work, I'm deeply into music - I play the guitar and love
+            producing my own tracks. I also enjoy chess for its strategy and
+            structure, and I read widely to keep my creativity sharp and
+            perspective broad.
+          </p>
+          <br />
+          <p>
             Working with me means collaborating with someone who values
-            creativity, precision, and digital craftsmanship. I am always ready
-            to take on new challenges and excited to build something
-            exceptional.
+            craftsmanship, consistency, innovation, and who's always ready to
+            push a project beyond what's expected.
           </p>
         </div>
         <div className="flex extra-margin">

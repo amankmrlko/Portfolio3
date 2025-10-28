@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { FiCopy, FiCheck } from "react-icons/fi"; // icons for copy + success
 
 const CodeSnippet = ({ code, language = "javascript" }) => {
@@ -28,7 +28,7 @@ const CodeSnippet = ({ code, language = "javascript" }) => {
     padding: "16px 20px",
     fontSize: "13px",
     lineHeight: "19px",
-    background: "#282c34",
+    background: "#1c1c1c",
   };
 
   const buttonStyle = {
@@ -64,7 +64,7 @@ const CodeSnippet = ({ code, language = "javascript" }) => {
 
       <SyntaxHighlighter
         language={language}
-        style={oneDark}
+        style={tomorrow}
         customStyle={codeStyle}
         showLineNumbers
       >

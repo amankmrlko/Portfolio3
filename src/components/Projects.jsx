@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import EmailCTA from "./EmailCTA";
 import chatspaceimg from "../assets/chatspace_thumbnail.jpg";
 import { MdArrowOutward } from "react-icons/md";
+import codelensimage from "../assets/codelens_thub.jpg";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -37,6 +38,26 @@ function Projects() {
       </div>
       <h4 className="white-text extra-extra-margin">My Work</h4>
       <div className="grid2c gap10px">
+        {/* code lens */}
+
+        <Link to="/codelens">
+          <div className="project-box">
+            <div className="image-div">
+              <img src={codelensimage} alt="Project thumbnail" />
+            </div>
+            <div className="project-desc">
+              <div>
+                <h5 className="white-text">
+                  CodeLens: AI Agent for Repositories
+                </h5>
+                <p className="gray-text">
+                  Instant, context-aware GitHub insights locally
+                </p>
+              </div>
+              <MdArrowOutward size={20} className="gray-text" />
+            </div>
+          </div>
+        </Link>
         <a href="/chat-space">
           <div className="project-box">
             <div className="image-div">

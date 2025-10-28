@@ -2,6 +2,14 @@ import React from "react";
 import CodeSnippet from "./CodeSnippet";
 import Heading from "./Heading";
 import architecture from "../assets/codelens_arc.jpg";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const pageVariants = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+  exit: { opacity: 0, y: -20, transition: { duration: 0.2 } },
+};
 
 function CodeLens() {
   const c1code = `// Smart file relevance scoring algorithm
@@ -130,7 +138,12 @@ npm run dev
 `;
 
   return (
-    <>
+    <motion.div
+      variants={pageVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <Heading
         title="CodeLens: AI-Powered Repository Analysis Platform"
         subtitle='"Ask questions about any GitHub repository and get instant, context-aware answers powered by local AI"'
@@ -778,7 +791,7 @@ npm run dev
             rel="noopener noreferrer"
             className="link-text"
           >
-            github.com/amankmrlko/CodeLENS_Frontend
+            Repo Link
           </a>
         </p>
         <p className="white-text">
@@ -790,7 +803,7 @@ npm run dev
             rel="noopener noreferrer"
             className="link-text"
           >
-            github.com/amankmrlko/CodeLENS_Backend
+            Repo Link
           </a>
         </p>
         <p className="white-text">
@@ -846,8 +859,13 @@ npm run dev
             enterprise-grade engineering skills.
           </i>
         </p>
+        <div className="flex extra-margin">
+          <Link to="/thoughts">
+            <p className="cta1 hover1">Got something to say?</p>
+          </Link>
+        </div>
       </div>
-    </>
+    </motion.div>
   );
 }
 

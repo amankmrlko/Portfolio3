@@ -2,9 +2,7 @@ import React from "react";
 import Heading from "./Heading";
 import { Link } from "react-router-dom";
 import EmailCTA from "./EmailCTA";
-import ProjectCTA from "./ProjectCTA";
-import Framer_project from "../assets/framer_project.jpg";
-import Sundown from "../assets/sundown.jpg";
+import codelensimage from "../assets/codelens_thub.jpg";
 import { FaQuoteLeft } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { VscFeedback } from "react-icons/vsc";
@@ -64,6 +62,25 @@ function Explore() {
 
       <h4 className="white-text extra-extra-margin">Latest Work</h4>
       <div className="flex no-mob-flex space-between">
+        <Link to="/codelens">
+          <div className="project-box">
+            <div className="image-div">
+              <img src={codelensimage} alt="Project thumbnail" />
+            </div>
+            <div className="project-desc">
+              <div>
+                <h5 className="white-text">
+                  CodeLens: AI Agent for Repositories
+                </h5>
+                <p className="gray-text">
+                  Instant, context-aware GitHub insights locally
+                </p>
+              </div>
+              <MdArrowOutward size={20} className="gray-text" />
+            </div>
+          </div>
+        </Link>
+
         <a href="/chat-space">
           <div className="project-box">
             <div className="image-div">
@@ -80,12 +97,6 @@ function Explore() {
             </div>
           </div>
         </a>
-        <ProjectCTA
-          image={Sundown}
-          link="https://amankmrz-sundownclone.netlify.app/"
-          title="Sundown Clone"
-          description="Clone of Sundown with sleek animations"
-        />
       </div>
 
       <div className="flex no-mob-flex2 space-between extra-margin">

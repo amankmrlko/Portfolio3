@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Tcs from "../assets/tcslogo.png";
 import { Link } from "react-router-dom";
 import EmailCTA from "./EmailCTA";
-import Accenture from "../assets/accenture.png";
+import Accenture from "../assets/Accenture.png";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },

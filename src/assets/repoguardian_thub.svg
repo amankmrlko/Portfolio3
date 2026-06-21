@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="RepoGuardian">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="0.5" stop-color="#1e293b"/>
+      <stop offset="1" stop-color="#134e4a"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g opacity="0.06" fill="#5eead4" font-family="Consolas,monospace" font-size="22">
+    <text x="60" y="120">import x from 'y'</text>
+    <text x="60" y="560">npx repoguardian init</text>
+    <text x="820" y="150">.gitignore</text>
+    <text x="840" y="600">findings.json</text>
+  </g>
+  <g transform="translate(600 286)">
+    <path transform="translate(-70 -90) scale(1.4)"
+      d="M50 4 L92 20 V52 C92 84 72 108 50 118 C28 108 8 84 8 52 V20 Z"
+      fill="none" stroke="url(#teal)" stroke-width="4"/>
+    <path transform="translate(-70 -90) scale(1.4)"
+      d="M50 14 L84 27 V52 C84 78 68 98 50 107 C32 98 16 78 16 52 V27 Z"
+      fill="rgba(20,184,166,0.12)"/>
+    <path transform="translate(-70 -90) scale(1.4)"
+      d="M34 54 L46 66 L70 40"
+      fill="none" stroke="#5eead4" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="600" y="470" text-anchor="middle" fill="#ffffff"
+    font-family="Segoe UI,system-ui,sans-serif" font-size="72" font-weight="700" letter-spacing="-1">RepoGuardian</text>
+  <text x="600" y="520" text-anchor="middle" fill="#94e6d4"
+    font-family="Segoe UI,system-ui,sans-serif" font-size="28" font-weight="600">Repository-aware context layer for AI assistants</text>
+  <g transform="translate(600 580)" font-family="Segoe UI,system-ui,sans-serif" font-size="20" fill="#cbd5e1">
+    <text x="0" y="0" text-anchor="middle">Local-first · Zero dependencies · MIT</text>
+  </g>
+</svg>

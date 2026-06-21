@@ -25,6 +25,8 @@ import Blogs from "./components/Blogs";
 import BlogPage from "./components/BlogPage";
 import ChatSpace from "./components/ChatSpace";
 import CodeLens from "./components/CodeLens";
+import RepoGuardian from "./components/RepoGuardian";
+import ScrollToTop from "./components/ScrollToTop";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -43,6 +45,7 @@ function AnimatedRoutes() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/chat-space" element={<ChatSpace />} />
         <Route path="/codelens" element={<CodeLens />} />
+        <Route path="/repoguardian" element={<RepoGuardian />} />
         <Route path="/blogs/:id" element={<BlogPage />} />
         <Route
           path="/blogpost"
@@ -61,6 +64,7 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="canvas">
         <NavBar />
         <NavMobile />

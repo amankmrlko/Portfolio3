@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "generatedAt": "2026-06-21T14:29:20.720Z",
+  "sourceHash": "13c1a25b6d292b7f",
+  "repoguardianVersion": "0.3.0",
+  "network": {
+    "vulnLookups": false
+  }
+}

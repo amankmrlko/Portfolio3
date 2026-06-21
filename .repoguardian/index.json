@@ -1,0 +1,41 @@
+{
+  "languages": [
+    {
+      "name": "JavaScript",
+      "percent": 45.9
+    },
+    {
+      "name": "JSON",
+      "percent": 42.2
+    },
+    {
+      "name": "CSS",
+      "percent": 10.9
+    },
+    {
+      "name": "Markdown",
+      "percent": 0.5
+    },
+    {
+      "name": "HTML",
+      "percent": 0.5
+    }
+  ],
+  "frameworks": [
+    "React"
+  ],
+  "packageManagers": [
+    "npm"
+  ],
+  "auth": "Firebase Auth",
+  "hosting": "Vercel",
+  "entryPoints": [
+    "src/"
+  ],
+  "notableSdks": [],
+  "stats": {
+    "files": 77,
+    "loc": 10167,
+    "testFiles": 0
+  }
+}

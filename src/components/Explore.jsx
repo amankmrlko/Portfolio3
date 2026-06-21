@@ -13,7 +13,7 @@ import Notion from "../assets/notion.jpg";
 import Vite from "../assets/vitejs-logo.svg";
 import Claude from "../assets/claude.avif";
 import { MdArrowOutward } from "react-icons/md";
-import chatspaceimg from "../assets/chatspace_thumbnail.jpg";
+import repoguardianimg from "../assets/repoguardian_thub.svg";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -62,6 +62,25 @@ function Explore() {
 
       <h4 className="white-text extra-extra-margin">Latest Work</h4>
       <div className="flex no-mob-flex space-between">
+        <Link to="/repoguardian">
+          <div className="project-box">
+            <div className="image-div">
+              <img src={repoguardianimg} alt="Project thumbnail" />
+            </div>
+            <div className="project-desc">
+              <div>
+                <h5 className="white-text">
+                  RepoGuardian: Context Layer for AI Assistants
+                </h5>
+                <p className="gray-text">
+                  Repository-aware context, free and fully local
+                </p>
+              </div>
+              <MdArrowOutward size={20} className="gray-text" />
+            </div>
+          </div>
+        </Link>
+
         <Link to="/codelens">
           <div className="project-box">
             <div className="image-div">
@@ -81,22 +100,6 @@ function Explore() {
           </div>
         </Link>
 
-        <a href="/chat-space">
-          <div className="project-box">
-            <div className="image-div">
-              <img src={chatspaceimg} alt="Project thumbnail" />
-            </div>
-            <div className="project-desc">
-              <div>
-                <h5 className="white-text">Instant Real-Time Chat Platform</h5>
-                <p className="gray-text">
-                  Secure, fast, and seamless messaging everywhere
-                </p>
-              </div>
-              <MdArrowOutward size={20} className="gray-text" />
-            </div>
-          </div>
-        </a>
       </div>
 
       <div className="flex no-mob-flex2 space-between extra-margin">

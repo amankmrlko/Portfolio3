@@ -1,0 +1,739 @@
+{
+  "nodes": [
+    {
+      "id": "eslint.config.js",
+      "type": "module"
+    },
+    {
+      "id": "vite.config.js",
+      "type": "module"
+    },
+    {
+      "id": "src/App.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/firebase.js",
+      "type": "module"
+    },
+    {
+      "id": "src/main.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/utils/profanityFilter.js",
+      "type": "module"
+    },
+    {
+      "id": "src/components/About.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/BlogContentComp.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/BlogCTA.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/BlogPage.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/Blogpost.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/Blogs.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/ChatSpace.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/CodeLens.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/CodeSnippet.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/Contact.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/EmailCTA.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/Experience.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/Explore.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/Footer.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/Heading.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/Login.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/NavBar.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/NavMobile.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/Notfound.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/ProjectCTA.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/Projects.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/ProtectedRoute.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/Techcta.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/Techstack.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/Thoughts.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/thoughtsComp/Comment.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/thoughtsComp/Post.jsx",
+      "type": "module"
+    },
+    {
+      "id": "src/components/thoughtsComp/ThreadPost.jsx",
+      "type": "module"
+    },
+    {
+      "id": "firebase",
+      "type": "dependency"
+    },
+    {
+      "id": "framer-motion",
+      "type": "dependency"
+    },
+    {
+      "id": "react",
+      "type": "dependency"
+    },
+    {
+      "id": "react-dom",
+      "type": "dependency"
+    },
+    {
+      "id": "react-icons",
+      "type": "dependency"
+    },
+    {
+      "id": "react-router-dom",
+      "type": "dependency"
+    },
+    {
+      "id": "react-syntax-highlighter",
+      "type": "dependency"
+    },
+    {
+      "id": "@eslint/js",
+      "type": "dependency"
+    },
+    {
+      "id": "@types/react",
+      "type": "dependency"
+    },
+    {
+      "id": "@types/react-dom",
+      "type": "dependency"
+    },
+    {
+      "id": "@vitejs/plugin-react",
+      "type": "dependency"
+    },
+    {
+      "id": "eslint",
+      "type": "dependency"
+    },
+    {
+      "id": "eslint-plugin-react-hooks",
+      "type": "dependency"
+    },
+    {
+      "id": "eslint-plugin-react-refresh",
+      "type": "dependency"
+    },
+    {
+      "id": "globals",
+      "type": "dependency"
+    },
+    {
+      "id": "vite",
+      "type": "dependency"
+    }
+  ],
+  "edges": [
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/NavBar.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/Explore.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/About.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/Projects.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/Experience.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/Techstack.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/Thoughts.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/Contact.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/Footer.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/NavMobile.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/Notfound.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/Login.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/Blogpost.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/ProtectedRoute.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/Blogs.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/BlogPage.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/ChatSpace.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/CodeLens.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/main.jsx",
+      "to": "src/App.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/main.jsx",
+      "to": "src/index.css",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/About.jsx",
+      "to": "src/components/Heading.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/About.jsx",
+      "to": "src/assets/AmanAbout.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/About.jsx",
+      "to": "src/components/EmailCTA.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/About.jsx",
+      "to": "src/components/Techcta.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/About.jsx",
+      "to": "src/assets/react.png",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/About.jsx",
+      "to": "src/assets/notion.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/About.jsx",
+      "to": "src/assets/vitejs-logo.svg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/About.jsx",
+      "to": "src/assets/claude.avif",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/BlogPage.jsx",
+      "to": "src/components/Heading.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/BlogPage.jsx",
+      "to": "src/components/BlogContentComp.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/BlogPage.jsx",
+      "to": "src/components/thoughtsComp/Comment.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/BlogPage.jsx",
+      "to": "src/firebase.js",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/BlogPage.jsx",
+      "to": "src/utils/profanityFilter.js",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Blogpost.jsx",
+      "to": "src/components/Heading.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Blogpost.jsx",
+      "to": "src/firebase.js",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Blogpost.jsx",
+      "to": "src/utils/profanityFilter.js",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Blogs.jsx",
+      "to": "src/components/Heading.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Blogs.jsx",
+      "to": "src/components/BlogCTA.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Blogs.jsx",
+      "to": "src/firebase.js",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/ChatSpace.jsx",
+      "to": "src/components/CodeSnippet.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/ChatSpace.jsx",
+      "to": "src/components/Heading.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/ChatSpace.jsx",
+      "to": "src/assets/chatspace-login.png",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/ChatSpace.jsx",
+      "to": "src/assets/chatspace_overview.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/ChatSpace.jsx",
+      "to": "src/assets/chatspace-search.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/ChatSpace.jsx",
+      "to": "src/assets/schema.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/CodeLens.jsx",
+      "to": "src/components/CodeSnippet.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/CodeLens.jsx",
+      "to": "src/components/Heading.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/CodeLens.jsx",
+      "to": "src/assets/codelens_arc.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Contact.jsx",
+      "to": "src/components/Heading.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Contact.jsx",
+      "to": "src/components/EmailCTA.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Experience.jsx",
+      "to": "src/components/Heading.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Experience.jsx",
+      "to": "src/assets/tcslogo.png",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Experience.jsx",
+      "to": "src/components/EmailCTA.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Experience.jsx",
+      "to": "src/assets/Accenture.png",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Explore.jsx",
+      "to": "src/components/Heading.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Explore.jsx",
+      "to": "src/components/EmailCTA.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Explore.jsx",
+      "to": "src/assets/codelens_thub.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Explore.jsx",
+      "to": "src/components/Techcta.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Explore.jsx",
+      "to": "src/assets/react.png",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Explore.jsx",
+      "to": "src/assets/notion.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Explore.jsx",
+      "to": "src/assets/vitejs-logo.svg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Explore.jsx",
+      "to": "src/assets/claude.avif",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Explore.jsx",
+      "to": "src/assets/chatspace_thumbnail.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Login.jsx",
+      "to": "src/firebase.js",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Login.jsx",
+      "to": "src/components/Heading.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/NavBar.jsx",
+      "to": "src/assets/profilePic.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/NavMobile.jsx",
+      "to": "src/assets/profilePic.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Notfound.jsx",
+      "to": "src/components/Heading.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Projects.jsx",
+      "to": "src/components/Heading.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Projects.jsx",
+      "to": "src/components/ProjectCTA.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Projects.jsx",
+      "to": "src/assets/framer_project.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Projects.jsx",
+      "to": "src/assets/sundown.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Projects.jsx",
+      "to": "src/assets/ouchi.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Projects.jsx",
+      "to": "src/assets/firstportfolio.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Projects.jsx",
+      "to": "src/components/EmailCTA.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Projects.jsx",
+      "to": "src/assets/chatspace_thumbnail.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Projects.jsx",
+      "to": "src/assets/codelens_thub.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/components/Heading.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/components/EmailCTA.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/components/Techcta.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/assets/react.png",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/assets/notion.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/assets/vitejs-logo.svg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/assets/claude.avif",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/assets/next.png",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/assets/js.png",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/assets/tailwind.png",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/assets/framer.avif",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/assets/webflow.svg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/assets/sitecore.jpg",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/assets/git.png",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/assets/azure.png",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/assets/chatgpt.png",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/assets/Visual.png",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Techstack.jsx",
+      "to": "src/assets/ssms.png",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Thoughts.jsx",
+      "to": "src/firebase.js",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Thoughts.jsx",
+      "to": "src/components/Heading.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Thoughts.jsx",
+      "to": "src/components/thoughtsComp/Post.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/Thoughts.jsx",
+      "to": "src/components/thoughtsComp/ThreadPost.jsx",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/thoughtsComp/Post.jsx",
+      "to": "src/firebase.js",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/thoughtsComp/Post.jsx",
+      "to": "src/utils/profanityFilter.js",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/thoughtsComp/ThreadPost.jsx",
+      "to": "src/firebase.js",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/thoughtsComp/ThreadPost.jsx",
+      "to": "src/utils/profanityFilter.js",
+      "kind": "imports"
+    },
+    {
+      "from": "src/components/thoughtsComp/ThreadPost.jsx",
+      "to": "src/components/thoughtsComp/Comment.jsx",
+      "kind": "imports"
+    }
+  ],
+  "dependencies": {
+    "outdated": [],
+    "unused": [],
+    "duplicate": [],
+    "vulnerable": [],
+    "phantom": []
+  },
+  "deadWeight": {
+    "deadFiles": [],
+    "orphanedFolders": [],
+    "unusedExports": [],
+    "staleAssets": []
+  }
+}

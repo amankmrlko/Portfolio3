@@ -11,6 +11,7 @@ import EmailCTA from "./EmailCTA";
 import chatspaceimg from "../assets/chatspace_thumbnail.jpg";
 import { MdArrowOutward } from "react-icons/md";
 import codelensimage from "../assets/codelens_thub.jpg";
+import repoguardianimg from "../assets/repoguardian_thub.svg";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -38,6 +39,27 @@ function Projects() {
       </div>
       <h4 className="white-text extra-extra-margin">My Work</h4>
       <div className="grid2c gap10px">
+        {/* repoguardian */}
+
+        <Link to="/repoguardian">
+          <div className="project-box">
+            <div className="image-div">
+              <img src={repoguardianimg} alt="Project thumbnail" />
+            </div>
+            <div className="project-desc">
+              <div>
+                <h5 className="white-text">
+                  RepoGuardian: Context Layer for AI Assistants
+                </h5>
+                <p className="gray-text">
+                  Repository-aware context, free and fully local
+                </p>
+              </div>
+              <MdArrowOutward size={20} className="gray-text" />
+            </div>
+          </div>
+        </Link>
+
         {/* code lens */}
 
         <Link to="/codelens">

@@ -1105,6 +1105,7 @@ a {
   border-radius: 10px;
   padding: 14px 12px;
   text-align: center;
+  overflow: hidden;
 }
 
 .rg-stats b {

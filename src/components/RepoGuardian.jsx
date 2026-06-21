@@ -159,6 +159,8 @@ npx repoguardian status
           &nbsp;·&nbsp; npmjs.com/package/repoguardian &nbsp;·&nbsp; TypeScript ·
           MIT
         </p>
+        <br />
+        <br />
 
         <h2 className="white-text">Abstract</h2>
         <p className="gray-text">

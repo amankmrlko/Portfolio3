@@ -1112,22 +1112,26 @@ a {
   background-color: var(--background-2);
   border: 1px solid var(--cta);
   border-radius: 10px;
-  padding: 14px 12px;
+  padding: 12px 10px;
   text-align: center;
   overflow: hidden;
 }
 
 .rg-stats b {
   display: block;
-  font-size: 22px;
+  font-size: 18px;
   color: var(--primary-text);
-  line-height: 1.1;
-  margin-bottom: 4px;
+  line-height: 1.5;
+  margin-bottom: 2px;
+  overflow: hidden;
 }
 
 .rg-stats span {
-  font-size: 12px;
+  display: block;
+  font-size: 11px;
+  line-height: 1.4;
   color: var(--secondary-text);
+  overflow: hidden;
 }
 
 .margin-bottom {

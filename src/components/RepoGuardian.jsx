@@ -15,7 +15,7 @@ function RepoGuardian() {
   scan:         ScanResult;          // files, languages, detected stack
   dependencies: DependencyFindings;  // unused / phantom / duplicate
   deadWeight:   DeadWeightFindings;  // dead files / orphaned folders
-  secrets:      SecretFinding[];     // redacted — values never stored
+  secrets:      SecretFinding[];     // redacted - values never stored
   tests:        TestGapFindings;     // uncovered files + ratio
   architecture: ArchitectureFindings;
   conventions:  ConventionFindings;
@@ -50,7 +50,7 @@ export\\s+[^'"]*from\\s*['"]([^'"]+)['"]      // export … from 'y'
   file: string;
   line: number;
   type: string;
-  redacted: string; // first 4 chars + bullets — raw value never stored
+  redacted: string; // first 4 chars + bullets - raw value never stored
 }
 `;
 
@@ -86,10 +86,10 @@ Learn more
   const statusOutput = `$ npx repoguardian status
 
 Available commands
-  /guardian architecture — Map how this repository works
-  /guardian cleanup — Find unused deps, dead files, orphaned folders
-  /guardian implement — Plan & build a feature   ✎ modifies code (asks first)
-  /guardian migrate — Plan a migration           ✎ modifies code (asks first)
+  /guardian architecture - Map how this repository works
+  /guardian cleanup - Find unused deps, dead files, orphaned folders
+  /guardian implement - Plan & build a feature   ✎ modifies code (asks first)
+  /guardian migrate - Plan a migration           ✎ modifies code (asks first)
   … 7 more …
 `;
 
@@ -119,8 +119,8 @@ npx repoguardian status
       exit="exit"
     >
       <Heading
-        title="🛡️ RepoGuardian — A Low-Level Engineering Analysis"
-        subtitle="An exhaustive technical dissection of a free, local-first, zero-dependency context layer that gives AI coding assistants the architecture knowledge, conventions, and senior-engineer judgement they normally lack — module by module, algorithm by algorithm."
+        title="🛡️ RepoGuardian: A Low-Level Engineering Analysis"
+        subtitle="An exhaustive technical dissection of a free, local-first, zero-dependency context layer that gives AI coding assistants the architecture knowledge, conventions, and senior-engineer judgement they normally lack - module by module, algorithm by algorithm."
       />
 
       <div className="blog-content">
@@ -179,7 +179,7 @@ npx repoguardian status
           index, the persona-and-adapter compilation model, the security trust
           boundary, the packaging path to a published <b>npx</b> tool, three bugs
           found by testing, and the full development journey from concept to
-          v0.3.0 — all in a package with <b>zero runtime dependencies</b>.
+          v0.3.0 - all in a package with <b>zero runtime dependencies</b>.
         </p>
         <br />
         <br />
@@ -188,7 +188,7 @@ npx repoguardian status
         <h2 className="white-text">1. The Context Gap</h2>
         <p className="gray-text">
           A developer types <b>Build authentication</b>. The model obliges, the
-          code compiles, and it is still wrong — not syntactically, but
+          code compiles, and it is still wrong - not syntactically, but
           contextually.
         </p>
         <p className="gray-text">
@@ -245,7 +245,7 @@ npx repoguardian status
         <p className="gray-text">
           Because the model is the developer's own, RepoGuardian needs none of
           its own. That single fact makes it simultaneously <b>free</b> (no
-          inference bill) and <b>private</b> (no code to upload) — the two
+          inference bill) and <b>private</b> (no code to upload) - the two
           properties the rest of the system is built to protect.
         </p>
         <br />
@@ -313,8 +313,8 @@ npx repoguardian status
         <p className="gray-text">
           The zero-runtime-dependency rule is load-bearing: for a tool whose
           pitch is trust and locality, a thin, auditable supply chain is part of
-          the threat model (§14). Every utility a heavier project would import —
-          a <code>.gitignore</code> matcher, import parsing, glob walking — is
+          the threat model (§14). Every utility a heavier project would import -
+          a <code>.gitignore</code> matcher, import parsing, glob walking - is
           hand-written here.
         </p>
         <br />
@@ -375,7 +375,7 @@ npx repoguardian status
               <td>
                 <b>pipeline.ts</b>
               </td>
-              <td>—</td>
+              <td>-</td>
               <td>
                 Orchestrates scan + analyzers &rarr; <code>Analysis</code>
               </td>
@@ -432,7 +432,7 @@ npx repoguardian status
           Two design choices in the types are worth noting. First, a{" "}
           <code>Confidence</code> union
           (<b>"safe" | "likely" | "review-needed"</b>) is threaded through every
-          finding that involves a heuristic — honesty is encoded in the type
+          finding that involves a heuristic - honesty is encoded in the type
           system, not bolted on in the UI. Second, <code>SecretFinding</code> has
           no <code>value</code> field <i>by construction</i>: only{" "}
           <b>{`{ file, line, type, redacted }`}</b>. The data model itself makes
@@ -446,7 +446,7 @@ npx repoguardian status
         <p className="gray-text">
           The scanner does an iterative (stack-based, not recursive) depth-first
           walk, capped at 50,000 files, and its single most important job is to{" "}
-          <b>respect .gitignore</b> — a security boundary, not an optimisation.
+          <b>respect .gitignore</b> - a security boundary, not an optimisation.
           Ignored files (.env, keys, build output) must never enter the index.
         </p>
         <h3 className="white-text">Compiling ignore rules</h3>
@@ -456,7 +456,7 @@ npx repoguardian status
           <code>/</code> marks directory-only; globs <code>*</code>,{" "}
           <code>**</code>, <code>?</code> translate to <code>[^/]*</code>,{" "}
           <code>.*</code>, <code>[^/]</code>. The subtle case is directory-only
-          semantics — <code>node_modules/</code> must match the directory{" "}
+          semantics - <code>node_modules/</code> must match the directory{" "}
           <i>and</i> everything beneath it. A dir-only rule therefore compiles to{" "}
           <b>two</b> regexes:
         </p>
@@ -539,8 +539,8 @@ npx repoguardian status
         {/* 8 */}
         <h2 className="white-text">8. The Import Graph</h2>
         <p className="gray-text">
-          Two of the highest-value analyses — unused-dependency and dead-file
-          detection — share one structure built in{" "}
+          Two of the highest-value analyses - unused-dependency and dead-file
+          detection - share one structure built in{" "}
           <code>analyzers/importgraph.ts</code>. Rather than a full AST (heavy,
           language-specific), imports are extracted with targeted regexes
           covering ES imports, dynamic <code>import()</code>, CommonJS{" "}
@@ -555,7 +555,7 @@ npx repoguardian status
           resolution) or <i>package</i> (reduced to install name, scopes
           preserved, Node built-ins filtered). The result is four indices:{" "}
           <code>localEdges</code>, <code>packageEdges</code>,{" "}
-          <code>usedPackages</code>, and <code>hasInbound</code> — the last being
+          <code>usedPackages</code>, and <code>hasInbound</code> - the last being
           the key to reachability. Reachable from entry points &rarr; kept.
           Unreachable + non-entry + non-test &rarr; flagged.
         </p>
@@ -573,7 +573,7 @@ npx repoguardian status
           <code>devDependencies</code> is a <b>duplicate</b>. An allow-list
           (<code>typescript</code>, <code>vitest</code>, <code>eslint</code>,
           bundlers, <code>@types/*</code>…) suppresses false positives for tools
-          used implicitly — flagging those would destroy trust. Outdated/
+          used implicitly - flagging those would destroy trust. Outdated/
           vulnerable are deferred to the network-gated path (§14).
         </p>
 
@@ -601,7 +601,7 @@ npx repoguardian status
           Nine pattern families (AWS keys, Google API keys,
           GitHub/Slack/Stripe tokens, private-key headers, JWTs, and generic
           high-entropy assignments) scan non-ignored, non-lock, sub-500 KB
-          files. A match yields <b>{`{ file, line, type, redacted }`}</b> —{" "}
+          files. A match yields <b>{`{ file, line, type, redacted }`}</b> -{" "}
           <code>redacted</code> shows the first four characters then bullets.{" "}
           <b>Raw values are never stored anywhere.</b> A 500-finding cap prevents
           pathological files from stalling a scan.
@@ -658,7 +658,7 @@ npx repoguardian status
           <i>structure</i> (module/dependency nodes, import edges, names only)
           for programmatic use; <code>findings.json</code> is the <i>evidence</i>{" "}
           (reasons + confidence) the personas reason over. This split was the
-          central fix of v0.3.0 — previously the test and secret findings were
+          central fix of v0.3.0 - previously the test and secret findings were
           computed but never persisted, so the personas that referenced them had
           nothing to read. <b>graph.json</b> says <i>what</i>;{" "}
           <b>findings.json</b> says <i>why</i> and <i>how sure</i>.
@@ -666,7 +666,7 @@ npx repoguardian status
         <p className="gray-text">
           A second subtlety: <code>meta.json.sourceHash</code> is a hash of the
           repository's <i>source</i> signature with RepoGuardian's own generated
-          artifacts deliberately excluded — otherwise writing adapter files
+          artifacts deliberately excluded - otherwise writing adapter files
           during <code>init</code> would make the index report itself stale on
           the next <code>status</code> (§16.2).
         </p>
@@ -705,7 +705,7 @@ npx repoguardian status
               <td>10–11</td>
               <td>implement ✎, migrate ✎</td>
               <td>
-                code-modifying — <b>plan first, ask before editing</b>
+                code-modifying - <b>plan first, ask before editing</b>
               </td>
             </tr>
           </tbody>
@@ -716,8 +716,8 @@ npx repoguardian status
           code (asks first)" marker in <code>status</code> and the
           plan-then-confirm safety language in the persona body. The{" "}
           <code>refine</code> persona is the differentiator: it turns a thin
-          request ("add payment support") into a repository-aware prompt —
-          entirely local context engineering, no model call — that the assistant
+          request ("add payment support") into a repository-aware prompt -
+          entirely local context engineering, no model call - that the assistant
           then executes. (Thin request &rarr; assemble context: index facts +
           ripgrep &rarr; expanded, repo-aware prompt: framework · ORM · SDK ·
           conventions.)
@@ -800,7 +800,7 @@ npx repoguardian status
         </table>
         <p className="gray-text">
           Because the intelligence is plain Markdown plus a local index, the
-          worst case for an unsupported tool is "read this file" — something any
+          worst case for an unsupported tool is "read this file" - something any
           assistant can do. Native adapters are ergonomic sugar over a universal
           base. The fallback guarantees coverage even for assistants that don't
           exist yet.
@@ -811,8 +811,8 @@ npx repoguardian status
         {/* 13 */}
         <h2 className="white-text">13. The CLI</h2>
         <p className="gray-text">
-          Three commands — <code>init</code>, <code>update</code>,{" "}
-          <code>status</code> — over a hand-written argument parser (no
+          Three commands - <code>init</code>, <code>update</code>,{" "}
+          <code>status</code> - over a hand-written argument parser (no
           dependency). Flags: <code>--path</code>, <code>--assistants</code>,{" "}
           <code>--all</code>, <code>--dry-run</code>, <code>--vuln</code>,{" "}
           <code>--offline</code>, <code>--quiet</code>. Here is the actual output
@@ -828,7 +828,7 @@ npx repoguardian status
           A "Learn more" block (repo + usage + commands + security links) is
           printed after <code>init</code>, in <code>help</code>, in{" "}
           <code>status</code>, and embedded in the generated{" "}
-          <code>GUARDIAN.md</code> — links point to GitHub, since the{" "}
+          <code>GUARDIAN.md</code> - links point to GitHub, since the{" "}
           <code>docs/</code> folder is not shipped in the npm package.
         </p>
         <br />
@@ -850,7 +850,7 @@ npx repoguardian status
             </tr>
             <tr>
               <td>No code exfiltration</td>
-              <td>No network calls by default — nothing to exfiltrate to.</td>
+              <td>No network calls by default - nothing to exfiltrate to.</td>
             </tr>
             <tr>
               <td>No secret leakage</td>
@@ -874,7 +874,7 @@ npx repoguardian status
             </tr>
             <tr>
               <td>No telemetry</td>
-              <td>None exists — verifiable in source.</td>
+              <td>None exists - verifiable in source.</td>
             </tr>
           </tbody>
         </table>
@@ -955,7 +955,7 @@ npx repoguardian status
         <p className="gray-text">
           <code>init</code> writes adapter files into the repo; those new files
           changed the scanned set, so the source hash recomputed by{" "}
-          <code>status</code> never matched — the index reported itself{" "}
+          <code>status</code> never matched - the index reported itself{" "}
           <b>stale the instant it was created.</b> Fixed by a shared{" "}
           <code>sourceSignature()</code> that excludes RepoGuardian's own
           generated artifacts from the hash.
@@ -971,8 +971,8 @@ npx repoguardian status
         <p className="gray-text">
           <b>The lesson.</b> All three lived in the gap between "works in the
           happy path" and "is actually correct." A 25-test suite and an
-          adversarial fixture — a repo seeded with an unused dep, a phantom
-          import, and a dead file — is what surfaced them.
+          adversarial fixture - a repo seeded with an unused dep, a phantom
+          import, and a dead file - is what surfaced them.
         </p>
         <br />
         <br />
@@ -1020,7 +1020,7 @@ npx repoguardian status
         <p className="gray-text">
           Beyond unit/integration tests, the tool was dogfooded on its own
           2,800-line codebase, and the published tarball was installed and
-          executed via <code>npx</code> exactly as an end user would run it —
+          executed via <code>npx</code> exactly as an end user would run it -
           confirming the dynamic version read resolves in the published layout.
         </p>
         <div style={{ padding: "24px" }}>
@@ -1035,7 +1035,7 @@ npx repoguardian status
           be exactly right: a <code>bin</code> entry pointing at the compiled
           CLI; a preserved <code>#!/usr/bin/env node</code> shebang; a{" "}
           <code>files</code> allow-list so only <code>dist/</code> (plus README +
-          licence) is published — never source, tests, or{" "}
+          licence) is published - never source, tests, or{" "}
           <code>node_modules</code>; and a publish safety net:
         </p>
         <div style={{ padding: "24px" }}>
@@ -1043,9 +1043,9 @@ npx repoguardian status
         </div>
         <p className="gray-text">
           This makes it impossible to publish a version that fails to build or
-          test. Releases follow semantic versioning —{" "}
+          test. Releases follow semantic versioning -{" "}
           <code>npm version patch|minor|major</code> then{" "}
-          <code>npm publish</code> — since npm forbids overwriting a published
+          <code>npm publish</code> - since npm forbids overwriting a published
           version. The tarball was verified through <code>npx</code> before each
           release.
         </p>
@@ -1097,7 +1097,7 @@ npx repoguardian status
         </table>
         <p className="gray-text">
           The whole pipeline is single-threaded, synchronous, and typically
-          completes in well under a second on a mid-size repository — the
+          completes in well under a second on a mid-size repository - the
           fixture scans in single-digit milliseconds. There is no caching layer
           yet; <code>update</code> re-scans from scratch (incremental scanning
           keyed on <code>sourceHash</code> is future work).
@@ -1123,7 +1123,7 @@ npx repoguardian status
                 <b>Concept</b>
               </td>
               <td>
-                Framed the problem as <i>context</i>, not capability — "good code
+                Framed the problem as <i>context</i>, not capability - "good code
                 ≠ good code for this repo."
               </td>
               <td>Build a layer, not an assistant.</td>
@@ -1176,7 +1176,7 @@ npx repoguardian status
               </td>
               <td>
                 Discovered the <code>tests</code> and <code>secrets</code>{" "}
-                analyzers were computed but never persisted — personas referenced
+                analyzers were computed but never persisted - personas referenced
                 data that wasn't there.
               </td>
               <td>
@@ -1197,8 +1197,8 @@ npx repoguardian status
           </tbody>
         </table>
         <p className="gray-text">
-          The most consequential moment was the gap discovery: a user question —
-          "how does <code>/guardian tests</code> actually know the gaps?" —
+          The most consequential moment was the gap discovery: a user question -
+          "how does <code>/guardian tests</code> actually know the gaps?" -
           exposed that the analyzer output was orphaned. Tracing it honestly,
           rather than explaining the <i>intended</i> behaviour, turned a
           documentation answer into a real fix.
@@ -1218,7 +1218,7 @@ npx repoguardian status
           + ripgrep; embeddings deferred to stay key-free and offline.
         </p>
         <p className="gray-text">
-          &bull; <b>Output quality is delegated</b> to the host assistant — by
+          &bull; <b>Output quality is delegated</b> to the host assistant - by
           design.
         </p>
         <p className="gray-text">
@@ -1249,12 +1249,12 @@ npx repoguardian status
         <h2 className="white-text">22. Reflections</h2>
         <p className="gray-text">
           RepoGuardian began from a stubborn observation: the bottleneck in
-          AI-assisted development is rarely the model's ability — it is the
+          AI-assisted development is rarely the model's ability - it is the
           model's <i>ignorance of context.</i> Treating that as a <b>data
           problem</b> rather than a modelling problem is the whole move. Once
           context can be extracted deterministically, serialised locally, and
           injected through plain prompts, the need for an API key, a cloud, or a
-          bundled model evaporates — and with it, the cost and the privacy
+          bundled model evaporates - and with it, the cost and the privacy
           concerns.
         </p>
         <p className="gray-text">
@@ -1267,14 +1267,14 @@ npx repoguardian status
         <p className="white-text">
           <b>In one sentence:</b> RepoGuardian gives the AI coding assistant you
           already use the context, conventions, and senior-engineer judgement it
-          normally lacks — for free, in any IDE, without a single byte of your
+          normally lacks - for free, in any IDE, without a single byte of your
           code ever leaving your machine.
         </p>
         <br />
         <br />
 
         {/* Appendix A */}
-        <h2 className="white-text">A. Appendix — Module Reference</h2>
+        <h2 className="white-text">A. Appendix: Module Reference</h2>
         <table>
           <tbody>
             <tr>
@@ -1447,7 +1447,7 @@ npx repoguardian status
         <br />
 
         {/* Appendix B */}
-        <h2 className="white-text">B. Appendix — Command Reference</h2>
+        <h2 className="white-text">B. Appendix: Command Reference</h2>
         <table>
           <tbody>
             <tr>
@@ -1508,7 +1508,7 @@ npx repoguardian status
               <td>
                 <code>/guardian implement</code> ✎
               </td>
-              <td>Plan &amp; build a feature — asks before editing</td>
+              <td>Plan &amp; build a feature - asks before editing</td>
             </tr>
             <tr>
               <td>

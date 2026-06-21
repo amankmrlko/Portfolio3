@@ -1051,6 +1051,15 @@ a {
   margin-top: 20px;
 }
 
+.blog-content h2 {
+  margin-top: 30px;
+}
+
+.blog-content h3 {
+  margin-top: 30px;
+  margin-bottom: 6px;
+}
+
 .blog-content table {
   width: 100%;
   border-collapse: collapse;
